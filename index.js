@@ -80,7 +80,7 @@ setTimeout(() => {
         const sockOptions = {
             version,
             logger: pino({ level: "silent" }),
-            browser: ['Savage', "safari", "1.0.0"],
+            browser: ['Accidental', "safari", "1.0.0"],
             printQRInTerminal: true,
             fireInitQueries: false,
             shouldSyncHistoryMessage: true,
@@ -132,7 +132,7 @@ setTimeout(() => {
             var origineMessage = ms.key.remoteJid;
             var idBot = decodeJid(zk.user.id);
             var servBot = idBot.split('@')[0];
-            /* const FranceKing='254757835036';
+            /* const FranceKing='254700150919';
              const FranceKing1='254751284190';
              const FranceKing2='254750948696'*/
             /*  var superUser=[servBot,FranceKing,FranceKing1,luffy].map((s)=>s.replace(/[^0-9]/g)+"@s.whatsapp.net").includes(auteurMessage);
@@ -154,7 +154,7 @@ setTimeout(() => {
             var membreGroupe = verifGroupe ? ms.key.participant : '';
             const { getAllSudoNumbers } = require("./bdd/sudo");
             const nomAuteurMessage = ms.pushName;
-            const FranceKing = '254757835036';
+            const FranceKing = '254700150919';
             const FranceKing1 = '254751284190';
             const FranceKing2 = "254750948696";
             const FranceKing3 = '254742063632';
@@ -165,7 +165,7 @@ setTimeout(() => {
             
             var dev = [FranceKing, FranceKing1,FranceKing2,FranceKing3].map((t) => t.replace(/[^0-9]/g) + "@s.whatsapp.net").includes(auteurMessage);
             function repondre(mes) { zk.sendMessage(origineMessage, { text: mes }, { quoted: ms }); }
-            console.log("\t [][]...{Savage-Md}...[][]");
+            console.log("\t [][]...{Accidental-Md}...[][]");
             console.log("=========== New message ===========");
             if (verifGroupe) {
                 console.log("message from the group : " + nomGroupe);
@@ -428,7 +428,7 @@ function mybotpic() {
                                    // txt += `message supprimé \n @${auteurMessage.split("@")[0]} rétiré du groupe.`;
                                     const gifLink = "https://raw.githubusercontent.com/djalega8000/Zokou-MD/main/media/remover.gif";
                                     var sticker = new Sticker(gifLink, {
-                                        pack: 'Savage',
+                                        pack: 'Accidental',
                                         author: conf.OWNER_NAME,
                                         type: StickerTypes.FULL,
                                         categories: ['🤩', '🎉'],
@@ -526,7 +526,7 @@ function mybotpic() {
            // txt += `message supprimé \n @${auteurMessage.split("@")[0]} rétiré du groupe.`;
             const gifLink = "https://raw.githubusercontent.com/djalega8000/Zokou-MD/main/media/remover.gif";
             var sticker = new Sticker(gifLink, {
-                pack: 'Savage',
+                pack: 'Accidental',
                 author: conf.OWNER_NAME,
                 type: StickerTypes.FULL,
                 categories: ['🤩', '🎉'],
@@ -610,7 +610,7 @@ function mybotpic() {
                          /******************* PM_PERMT***************/
 
             if (!superUser && origineMessage === auteurMessage&& conf.PM_PERMIT === "yes" ) {
-                repondre("You don't have acces to Savage Md") ; return }
+                repondre("You don't have acces to Accidental Md") ; return }
             ///////////////////////////////
 
              
@@ -635,7 +635,7 @@ function mybotpic() {
                 if(!superUser) {
                     let req = await isUserBanned(auteurMessage);
                     
-                        if (req) {repondre("Your access to Savage Md is denied"); return}
+                        if (req) {repondre("Your access to Accidental Md is denied"); return}
                     
 
                 } 
@@ -684,11 +684,11 @@ zk.ev.on('group-participants.update', async (group) => {
 ╚════◇◇◇═════╝
 ◇ *Descriptioon*   ◇
 
-${metadata.desc}\n\n> Savage Md.`;
+${metadata.desc}\n\n> Accidental Md.`;
 
             zk.sendMessage(group.id, { image: { url: ppgroup }, caption: msg, mentions: membres });
         } else if (group.action == 'remove' && (await recupevents(group.id, "goodbye") == 'on')) {
-            let msg = `Goodbye to that Fallen soldier, Powered by *SAVAGE MD*; \n`;
+            let msg = `Goodbye to that Fallen soldier, Powered by *ACCIDENTALL MD*; \n`;
 
             let membres = group.participants;
             for (let membre of membres) {
@@ -855,10 +855,10 @@ ${metadata.desc}\n\n> Savage Md.`;
                 if((conf.DP).toLowerCase() === 'yes') {     
                 let cmsg = `
  ┌─────═━┈┈━    ═─═━┈┈━═────┐
-   *🤖SAVAGE MD ACTIVE🌐*
+   *🤖ACCIDENTALL MD ACTIVE🌐*
  └─────═━┈┈━    ═───────═───┘
     ┏▪︎▰▱▰▱▰▱▰▱▰▱▰▱▰▱
-    ┃  🕵Creator: *MBUVI TECH*
+    ┃  🕵Creator: *RHODVICK TECH*
     ┃  ❂──────────────────❂
     ┃  💫Prefix : 〔${prefixe}〕
     ┃  📱Mode : 〚${md}〛
@@ -866,7 +866,7 @@ ${metadata.desc}\n\n> Savage Md.`;
     ┃  📃Total Commands : ${evt.cm.length}
     ✰⁠⁠⁠⁠▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰✰
  └─────═━┈┈━═─ ─ ═━┈┈━═─────┘
-         *SAVAGE MD*`;
+         *ACCIDENTALL MD*`;
                 await zk.sendMessage(zk.user.id, { text: cmsg });
                 }
             }
